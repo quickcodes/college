@@ -1,1 +1,1 @@
-# college 🖕
+# college 
