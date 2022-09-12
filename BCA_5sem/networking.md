@@ -23,10 +23,10 @@ It's all gonna be in english, Not because english is an international language b
 
 - My requrest is to imagine it like a real world communication Because we will learn OSI like a story...
 
-##### 1. Physical Layer
+#### 1. Physical Layer
 Our goal is to make a communication between computers, So Obviously the first thing to turn ON computers at physical level and all the physical stuff that's connect's computer together. The cables, wires etc... which physically connects a machine to network. And if a cable get cracked or miss-wired then it is a physical layer problem or issue or if a computer is unpluged. There is no fancy configurations here. No Hacking kinda stuff in terminal. It's physical.
 
-##### 2. Data Link Layer
+#### 2. Data Link Layer
 It's a little bit bigger concept. So, After all the physical setup is done Let suppose we have to communicate with the devices which are in same **SINGLE** networks. So can be done with the use of mac address or physical address. We can establish a connection between all the devices present in a single network using mac or physical address. Or here can understand that what actually network is. Here It can be router, National connection, etc. 
 
 Means all the devices connected with same router can communicate with each other using mac or physical address.
