@@ -13,13 +13,13 @@ It's all gonna be in english, Not because english is an international language b
 - Breaking down the model into 7 layers is important because when an error occured we can easily figure out, ohh it a session layer issue or its a transport layer issue etc...
 
 #### Lets understand each layer
-###### 1. Physical Layer
-###### 2. Data Link Layer
-###### 3. Network Layer
-###### 4. Transport Layer
-###### 5. Session Layer
-###### 6. Presentation Layer
-###### 7. Application Layer
+##### 1. Physical Layer
+##### 2. Data Link Layer
+##### 3. Network Layer
+##### 4. Transport Layer
+##### 5. Session Layer
+##### 6. Presentation Layer
+##### 7. Application Layer
 
 - My requrest is to imagine it like a real world communication Because we will learn OSI like a story...
 
