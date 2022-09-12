@@ -28,12 +28,18 @@ Our goal is to make a communication between computers, So Obviously the first th
 
 ##### 2. Data Link Layer
 It's a little bit bigger concept. So, After all the physical setup is done Let suppose we have to communicate with the devices which are in same **SINGLE** networks. So can be done with the use of mac address or physical address. We can establish a connection between all the devices present in a single network using mac or physical address. Or here can understand that what actually network is. Here It can be router, National connection, etc. 
+
 Means all the devices connected with same router can communicate with each other using mac or physical address.
+
 Now Okay here communication between devices under same networks are done. 
+
 Now we have to make communication between 2 or more networks. So a device in our network can communicate with the device in another network. 
+
 Now understand that there are millions are networks available. 
+
 Lets continue with our router example. 
 So now first duty is to communicate our device with our router then next duty is to communicate that router with our target device network router and then at the last the task is to communicate that router with our target device.
 And all this work done in our physical layer of choosing a right network from millions of available network. 
+
 Here you we saw a patter of hopping from device to router, then router to router, then router to device. In general all this are called nodes and this process is called node to node or hop to hop.
 If any issue occure like we got connected with another network or other that kind of stuff then it comes under data link layer issue.
