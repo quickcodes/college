@@ -16,8 +16,6 @@
 #### 6. Presentation Layer
 #### 7. Application Layer
 
-- My request is to imagine it like a real-world communication Because we will learn OSI like a story...
-
 ## 1. Physical Layer
 Our goal is to make communication between computers, So Obviously the first thing is to turn ON computers at the physical level and all the physical stuff that connects computers together. The cables, wires, etc... which physically connect a machine to the network. And if a cable gets cracked or miss-wired then it is a physical layer problem or issue or if a computer is unplugged. There are no fancy configurations here. No Hacking kinda stuff in the terminal. It's physical.
 
