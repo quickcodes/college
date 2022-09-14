@@ -12,10 +12,12 @@ So in order to communicate our computer with another computer there are two ways
 2. Logical
 
 #### Physical 
-By physical communication what I means is connecting computers with physical stuffs like cables. So they can transfer data or things like that. And because devices are connected physically the speed of communication is much faster than logical.
+By physical communication what I means is connecting computers with physical stuffs like cables. So they can transfer data or things like that. And because devices are connected physically the speed of communication is much faster than logical. And here device can be anything like camera, keyboard, mouse, display, anything... networking is not only a communication between two computer. Keyboard and cpu also needs to communicate, and so on.
 
 #### Logical 
-A logical network is a model of the connection between entities in which each entity is defined by a node.
+A logical network communication got done wirelessly and here device are called nodes. There are two types of model by which we can logically communicate. 
+1. OSI Model
+2. tcp/ip model
 
 # Index
 ##### 1. [OSI MODEL](./components/osi_model.md)
