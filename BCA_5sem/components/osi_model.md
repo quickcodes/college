@@ -50,7 +50,7 @@ If you are running linux you can get ip address of any website by the 'host' com
 ```
 host google.com
 ```
-### OUTPUT: 
+##### OUTPUT: 
 ```
 google.com has address 142.251.42.78
 google.com has IPv6 address 2404:6800:4009:82a::200e
