@@ -20,4 +20,4 @@ A logical network communication got done wirelessly and here devices are called 
 2. tcp/ip model
 
 # Index
-##### 1. [OSI MODEL](./components/osi_model.md)
+##### 1. [OSI MODEL](./utils/osi_model.md)
