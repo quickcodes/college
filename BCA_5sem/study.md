@@ -1,3 +1,3 @@
 # Index Of Content
 
-##### 1. [NETWORKING](./components/networking.md)
+##### 1. [Computer Networks](./components/networking.md)
