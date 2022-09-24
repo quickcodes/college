@@ -1,0 +1,23 @@
+1. Store records fo 100 students using array.
+2. Representation upper traingular and lower triangular sprase matrix in linear array.
+3. Push and pop operation on stack using array.
+4. Insertion and deletion operation on queue using array.
+5. Insertion and deletion operation on circular queue using array..
+6. Porgram for linear search.
+7. Porgram for Binary search.
+8. Porgram for exchanging the value of variables using pointers.
+9. Linked list creation, insertion and deletion.
+10. Count no. of elements in linked list.
+11. Sort a linkned list.
+12. Push and pop operation on stack using linked list.
+13. insertion and deletion operation on queue using linked list.
+14. insertin and deletion operation on circular queue using linked list.
+15. doubly linked list creation, insertion, deletion 
+16. creation of binary tree.
+17. insertion and deletion of binary search tree.
+18. complete progaram of binary search tree.
+19. complete program for binary search tree.
+20. representation of polunomial in linked list.
+21. bubble sort.
+22. selection sort.
+23. quick sort.
