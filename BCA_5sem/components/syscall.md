@@ -32,7 +32,7 @@ printf("Hello");
 - To use direct syscall we want to learn about our kernal how it works, what file discriptor is, and etc. Which is very important btw.
 
 
-- If want to know what syscall your programs are making you can use "strace" which trace system calls
+- If want to know what syscall your program is making. You can use "strace" which trace system calls.
 
 ```
 gcc hello.c
