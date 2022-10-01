@@ -1,0 +1,19 @@
+26 09 2022
+It uses single voltage level to represent data in this scheme to represent binary 1 high voltage is transmit & to represent 0 no voltage is transmitted.
+	It is also called unipolar non return to 0 because there is no rest condition that is either represents 1 or 0.
+
+Polar encoding: Polar encoding scheme uses multiple voltage level to represent binary values.
+Types of polar encoding -
+1. Non return to 0 NRZ - It uses 2 different voltage level to represent binary values generally positive voltage represent 1 and negative value represent 0. It is also NRZ because there is no rest condition.
+NRZ scheme has 2 varients :
+	a) NRZ-L  It changes voltage level when a different bit is incountered.
+	b) NRZ-I
+2.
+
+############## TOD - IAAS, PAAS, SAAS
+virtual machine is called host service in technical term.
+INFRASTRUCTURE AS A SERVICE
+PLATFORM AS A SERVICE
+SOFTWARE AS A SERVICE
+##############
+
