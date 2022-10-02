@@ -1,3 +1,13 @@
++++
+title  = "Print anything without printf in C/C++"
+date = 2022-10-01
++++
+
+
+We use printf function in c language which a wrapper function provided by GNU c library which provides us some extra functionality but under the hood in reality printf runs "write" which is deeper level system call
+
+<!-- more -->
+
 # System Call
 ```
 // #include<stdio.h>
@@ -13,26 +23,23 @@ int main(){
 }
 ```
 
-- We use printf function in c language which a wrapper function provided by GNU c library which provides us some extra functionality but under the hood in reality printf runs "write" which is deeper level system call
+Every time we try to use system kernal functionality we use system calls (syscalls). Because at the end kernal is the real hero who does all the stuff. We write programs which runs syscall.
 
 
-- Every time we try to use system kernal functionality we use system calls (syscalls). Because at the end kernal is the real hero who does all the stuff. We write programs which runs syscall.
+We programmers just get some wrapper functions like printf, scanf etc...
 
 
-- We programmers just get some wrapper functions like printf, scanf etc...
-
-
-- But the why we just use direct syscall? 🤔 It is because the are complicated than our lower level wrapper functions
+But the why we just use direct syscall? 🤔 It is because the are complicated than our lower level wrapper functions
 
 ```
 write(1, "Hello", 5);
 printf("Hello");
 ```
 
-- To use direct syscall we want to learn about our kernal how it works, what file discriptor is, and etc. Which is very important btw.
+To use direct syscall we want to learn about our kernal how it works, what file discriptor is, and etc. Which is very important btw.
 
 
-- If want to know what syscall your program is making. You can use "strace" which trace system calls.
+If want to know what syscall your programs are making you can use "strace" which trace system calls
 
 ```
 gcc hello.c
@@ -76,10 +83,10 @@ exit_group(0)                           = ?
 +++ exited with 0 +++
 ```
 
-- Here you can see at the end we got this write syscall, Don't worry about the starting stuff it is not by our code it is something required to run a program like execp which executes the program referred by the pathname.
+Here you can see at the end we got this write syscall, Don't worry about the starting stuff it is not by our code it is something required to run a program like execp which executes the program referred by the pathname.
 
 
-- Let's create a simple program to open and close a file
+Let's create a simple program to open and close a file
 
 ```
 #include<stdio.h>
@@ -133,29 +140,29 @@ exit_group(0)                           = ?
 +++ exited with 0 +++
 ```
 
-- Here we can see at end kernal uses syscall called openat which is used to open or preview a file. Interesting right? syscalls are some special functions provided by kernal.
+Here we can see at end kernal uses syscall called openat which is used to open or preview a file. Interesting right? syscalls are some special functions provided by kernal.
 
-- When you try to learn about this syscall like openat, write, etc. You'll notice one special topic File Discriptor. Which is very interesting. In linux everything is a file.
+When you try to learn about this syscall like openat, write, etc. You'll notice one special topic File Discriptor. Which is very interesting. In linux everything is a file.
 
-- File Discriptor is just an integer which is assigned by the process to a file which we open.
+File Discriptor is just an integer which is assigned by the process to a file which we open.
 
 ```
 openat(AT_FDCWD, "Hello.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
 ```
 
-- Here you can see when we create a call it returns 3
+Here you can see when we create a call it returns 3
 
-- But why it's 3? not 1, not 2, not 0...?🤔
+But why it's 3? not 1, not 2, not 0...?🤔
 
-- That is Because in Linux 0 assigned to standard input
-- 1 is assigned to Standard output. That's why in our write syscall we passed 1 if you remember
+That is Because in Linux 0 assigned to standard input
+1 is assigned to Standard output. That's why in our write syscall we passed 1 if you remember
 
 ```
 write(1, "Hello World", 5);
 ```
 
-- 2 is assigned to Standard error.
-- This are 3 numbers already assigned to processes. That's why when we create a file it returned value 3 and if we create or open another file look what happens
+2 is assigned to Standard error.
+This are 3 numbers already assigned to processes. That's why when we create a file it returned value 3 and if we create or open another file look what happens
 
 
 ```
@@ -180,11 +187,11 @@ exit_group(0)                           = ?
 +++ exited with 0 +++
 ```
 
-- It's incrementing file to file. Awesome
+It's incrementing file to file. Awesome
 
-- But wait we talked 1 is assigned to standard output and 0 is assigned to standard input etc Which is a file discriptor. And we also know that in linux everything is a file right? So this stdin, stdout are actually files??? Yes they are...
+But wait we talked 1 is assigned to standard output and 0 is assigned to standard input etc Which is a file discriptor. And we also know that in linux everything is a file right? So this stdin, stdout are actually files??? Yes they are...
 
-- Inside /dev directory you can find this three files stdin, stdout, stderr. And if we see in more detail.
+Inside /dev directory you can find this three files stdin, stdout, stderr. And if we see in more detail.
 
 ```
 ls -l std*
@@ -193,7 +200,7 @@ lrwxrwxrwx 1 root root 15 Oct  1 23:01 stdin -> /proc/self/fd/0
 lrwxrwxrwx 1 root root 15 Oct  1 23:01 stdout -> /proc/self/fd/1
 ```
 
-- We can see this are link files. And let me show you something really cool. if i echo something and store the output in a file like -
+ We can see this are link files. And let me show you something really cool. if i echo something and store the output in a file like -
 
 ```
 echo "hello world" >> foo.txt
@@ -207,7 +214,7 @@ echo "HaHaHa" > stdout
 HaHaHa
 ```
 
-- To make it more clear let's run our old code again and strace it.
+To make it more clear let's run our old code again and strace it.
 
 ##### code
 ```
@@ -230,9 +237,12 @@ exit_group(0)                           = ?
 +++ exited with 0 +++
 ```
 
-- Here we can see our kernal call write function and it pass 1 at the starting and now we know why this one is got passed. Because 1 is a file discriptor assigned to standard output (stdout).
+Here we can see our kernal call write function and it pass 1 at the starting and now we know why this one is got passed. Because 1 is a file discriptor assigned to standard output (stdout).
 
-- like when we use scanf to take inupt a systemcall read(0, "my text\n", 1024) is executed with File discriptor 0.
 
-- It is so so cool...
+like when we use scanf to take inupt a systemcall read(0, "my text\n", 1024) is executed with File discriptor 0.
+
+
+It is so so cool...
+
 
