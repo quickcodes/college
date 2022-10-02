@@ -1,14 +1,6 @@
-+++
-title  = "Print anything without printf in C/C++"
-date = 2022-10-01
-+++
-
-
-We use printf function in c language which a wrapper function provided by GNU c library which provides us some extra functionality but under the hood in reality printf runs "write" which is deeper level system call
-
-<!-- more -->
 
 # System Call
+We use printf function in c language which a wrapper function provided by GNU c library which provides us some extra functionality but under the hood in reality printf runs "write" which is deeper level system call
 ```
 // #include<stdio.h>
 
