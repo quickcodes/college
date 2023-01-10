@@ -8,3 +8,8 @@
 ##### 2. [System Calls and C funfact](./components/syscall.md)
 
 ##### 3. [Human Values College Syllabous](./components/human_values.md)
+
+##### 4. [IT Trends College Syllabous](./components/it_trends.md)
+
+
+
