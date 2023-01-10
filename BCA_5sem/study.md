@@ -11,5 +11,6 @@
 
 ##### 4. [IT Trends College Syllabous](./components/it_trends.md)
 
+##### 5. [Data Science College Syllabous](./components/DataScience.md)
 
-
+##### 6. [Cloud Computing College Syllabous](./components/CloudComputing.md)
