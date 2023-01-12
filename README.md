@@ -15,4 +15,10 @@
 
 ##### 6. [Cloud Computing College Syllabous](./BCA_5sem/components/CloudComputing.md)
 
-##### 7. [Cloud Computing College Syllabous](./BCA_5sem/components/CloudComputing.md)
+##### 7. [Java College Syllabous](./BCA_4sem/java_theory.md)
+
+##### 8. [Software Engineering College Syllabous](./BCA_4sem/se_theory.md)
+
+##### 9. [DBMS College Syllabous](./BCA_4sem/dbms.md)
+
+
