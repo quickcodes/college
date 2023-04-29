@@ -396,6 +396,63 @@ Timer(Duration(seconds: 1), () {
 ```
 The main difference between Future.delayed() and Timer() is that Future.delayed() returns a future that completes after the specified amount of time, while Timer() executes the specified action after the specified amount of time.
 
+## Mixins in Dart
+https://resocoder.com/2019/07/21/mixins-in-dart-understand-dart-flutter-fundamentals-tutorial/
+In Flutter, a mixin is a way to reuse a class's code in multiple class hierarchies. It allows you to add functionality to your class without inheriting from it, which is especially useful when you want to add behavior to a class that already has a different superclass.
+
+Here's an example of how mixins work in Flutter:
+```
+mixin EatMixin {
+  void eat() {
+    print('Eating...');
+  }
+  void sleep() {
+    print('Zzzzz...');
+  }
+}
+class Cat with EatMixin {
+  void meow() {
+    print('Meow!');
+  }
+}
+
+class Dog with EatMixin {
+  void bark() {
+    print('Woof!');
+  }
+}
+```
+
+## Sealed Unions in Dart
+https://resocoder.com/2019/09/16/sealed-unions-in-dart-never-write-an-if-statement-again-kind-of/
+In Dart, a sealed union is a way to represent a type that can have one of a fixed set of values. It is also known as an algebraic data type, a discriminated union, or an ADT.
+
+A sealed union can have several variants, each with its own set of properties. However, only one of these variants can be active at a time, and the union must be sealed, which means that all possible variants are defined upfront, and no other variants can be added later.
+
+Here's an example of how a sealed union works in Dart:
+```
+import 'package:sealed_unions/sealed_unions.dart';
+
+class Success extends Union1Impl<String> {
+  Success(String value) : super(value);
+}
+
+class Error extends Union1Impl<String> {
+  Error(String value) : super(value);
+}
+
+typedef MyResult = Union2<Success, Error>;
+
+void main() {
+  MyResult result = Success('Hello, world!');
+
+  result.join(
+    (value) => print(value),
+    (error) => print('Error: ${error.value}'),
+  );
+}
+```
+
 - ##### 14. What are the benefits of using a Provider pattern in Flutter?
 The Provider pattern is a design pattern in Flutter that is used to manage the state of an application. It provides a way to share data between widgets without having to pass it down the widget tree manually. The benefits of using the Provider pattern include cleaner code, better performance, and easier testing.
 - ##### 15. What is the purpose of the MaterialApp widget in Flutter?
