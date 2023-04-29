@@ -498,6 +498,10 @@ void main(){
 }
 ```
 
+## Responsive UI in Flutter 
+https://youtu.be/bXwK1Lrfihw
+
+
 - ##### 14. What are the benefits of using a Provider pattern in Flutter?
 The Provider pattern is a design pattern in Flutter that is used to manage the state of an application. It provides a way to share data between widgets without having to pass it down the widget tree manually. The benefits of using the Provider pattern include cleaner code, better performance, and easier testing.
 - ##### 15. What is the purpose of the MaterialApp widget in Flutter?
