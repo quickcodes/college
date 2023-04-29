@@ -398,6 +398,7 @@ The main difference between Future.delayed() and Timer() is that Future.delayed(
 
 ## Mixins in Dart
 https://resocoder.com/2019/07/21/mixins-in-dart-understand-dart-flutter-fundamentals-tutorial/
+
 In Flutter, a mixin is a way to reuse a class's code in multiple class hierarchies. It allows you to add functionality to your class without inheriting from it, which is especially useful when you want to add behavior to a class that already has a different superclass.
 
 Here's an example of how mixins work in Flutter:
@@ -425,6 +426,7 @@ class Dog with EatMixin {
 
 ## Sealed Unions in Dart
 https://resocoder.com/2019/09/16/sealed-unions-in-dart-never-write-an-if-statement-again-kind-of/
+
 In Dart, a sealed union is a way to represent a type that can have one of a fixed set of values. It is also known as an algebraic data type, a discriminated union, or an ADT.
 
 A sealed union can have several variants, each with its own set of properties. However, only one of these variants can be active at a time, and the union must be sealed, which means that all possible variants are defined upfront, and no other variants can be added later.
@@ -450,6 +452,49 @@ void main() {
     (value) => print(value),
     (error) => print('Error: ${error.value}'),
   );
+}
+```
+
+## Extensions 
+```
+extension EmailValidation on String {
+  bool isValidEmail() {
+    if (this == null) {
+      return false;
+    }
+    final regex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$');
+    return regex.hasMatch(this);
+  }
+
+  String operator &(String other) => '$this $other'; 
+}
+
+extension NumGenericExtension<T extends num> on T {
+  T addTen() => this + 10;
+}
+
+void main() {
+  String myString = 'example@example.com';
+  bool isValid = myString.isValidEmail();
+  print(isValid); // prints "true"
+  print("Hello" & "World"); // prints "Hello World"
+}
+```
+
+## Const in Flutter
+https://resocoder.com/2020/01/06/dart-const-tutorial-all-you-need-to-know-const-expressions-canonical-instances-and-more/
+
+```
+void main(){
+  final finalVar = 'hello world';
+  const constVar = 'hello world';
+
+  const nowWorking = finalVar;
+  const working = constVar;
+
+  // using below padding at 100 times
+  Padding(edgeInsets: EdgeInsets.all(8));     // Will create 100 instances in memory;
+  Padding(edgeInsets: const EdgeInsets.all(8));     // Will create 1 instances in memory called canonical instance;
 }
 ```
 
