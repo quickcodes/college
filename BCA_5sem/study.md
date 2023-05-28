@@ -14,3 +14,5 @@
 ##### 5. [Data Science College Syllabous](./components/DataScience.md)
 
 ##### 6. [Cloud Computing College Syllabous](./components/CloudComputing.md)
+
+##### 7. [Operation Research](./components/OperationResearch.md)
